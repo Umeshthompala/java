@@ -1,31 +1,31 @@
-//02/09/23
-//PolymorphismDemo.java
 import java.io.*;
-import java.util.*;
 class Animal{
     public void animalsound(){
-        System.out.println("An animal can make a sound");
-    }
-    
-}
-class Cow extends Animal{
-    public void animalsound()
-    {
-        System.out.println("A cow says maa");
+        System.out.println("Animal can make Sound");
     }
 }
-class Cat extends Animal{
+class cow extends Animal{
     public void animalsound(){
-        System.out.println("A cat says meow");
+        System.out.println("A cow says MAA");
     }
 }
-class PolymorphismDemo{
+class cat extends Animal{
+    public void animalsound(){
+        System.out.println("The cat says MEWO");
+    }
+}
+public class PolymorphismDemo{
     public static void main(String args[]){
-        Animal ma=new Animal();
-        Animal mc = new Cow();
-        Animal mycat= new Cat();
-        ma.animalsound();
-        mc.animalsound();
-        mycat.animalsound();
-    }
+        Animal myanimal=new Animal();
+        Animal mycow=new cow();
+        Animal mycat=new cat();
+        myanimal.animalsound();
+         mycow.animalsound();
+          mycat.animalsound();
+        }
 }
+
+OUTPUT:
+Animal can make Sound
+A cow says MAA
+The cat says MEWO
